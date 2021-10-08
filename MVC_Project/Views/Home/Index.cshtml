@@ -34,8 +34,9 @@
     </div>
 </section>
 
-@await Html.PartialAsync("Article")
+@*@await Html.PartialAsync("Article")*@
 
+@await Component.InvokeAsync("Article")
 <div class="container">
     <hr>
 </div>
