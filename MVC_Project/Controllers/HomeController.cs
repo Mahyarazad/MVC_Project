@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 using MVC_Project.Models;
 using System.Diagnostics;
 
@@ -11,10 +12,17 @@ namespace MVC_Project.Controllers
         {
             return View();
         }
-
-        public IActionResult Contact()
+        [HttpGet]
+        public ViewResult Contact()
         {
             return View();
+        }
+
+        [HttpPost]
+        public JsonResult Contact(Contact form)
+        {
+            Console.Write(form.ToString());
+            return Json(Ok());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
