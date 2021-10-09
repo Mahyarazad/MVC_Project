@@ -4,7 +4,7 @@ namespace MVC_Project.Models
 {
     public class MotherClass
     {
-        public List<PortFolio> PortFolio { get; set; }
+        public List<Project> PortFolio { get; set; }
         public List<Article> Article { get; set; }
     }
 }
